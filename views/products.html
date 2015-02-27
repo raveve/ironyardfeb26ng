@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-10">
+      <a href="">
+        <button class="btn btn-default pull-right topbtn">
+          <i class="fa fa-shopping-cart fa-2x fa-fw"></i>
+        </button>
+      </a>
+      <a href="#/">
+        <button class="btn btn-default pull-right topbtn">
+          <i class="fa fa-home fa-2x fa-fw"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Peddler</h1>
+      <h2>Bike Accessories</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3" ng-repeat="product in mainCtrl.products">
+      <h3>{{product.name}}</h3>
+      <img src="{{product.url}}" alt="">
+      <p>{{product.details}}</p>
+      <h3>${{product.price}}</h3>
+    </div>
+  </div>
+</div>
