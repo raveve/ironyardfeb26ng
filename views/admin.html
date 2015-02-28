@@ -20,8 +20,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      
+    <div class="col-md-6 col-md-offset-3" ng-repeat="product in mainCtrl.products">
+      <h3>{{product.name}}</h3>
+      <img class="prodimg" src="{{product.url}}" alt="">
+      <p>{{product.details}}</p>
+      <h3>${{product.price}}</h3>
+      <button class="btn btn-default adminbtn">
+        <i class="fa fa-pencil-square-o fa-2x fa-fw"></i>
+      </button>
+      <button class="btn btn-default adminbtn" ng-click="mainCtrl.deleteProduct(product)">
+        <i class="fa fa-trash fa-2x fa-fw"></i>
+      </button>
     </div>
   </div>
 </div>

@@ -11,6 +11,10 @@
           $scope.newProduct = {};
         };
 
+        mainCtrl.deleteProduct = function(product) {
+          BikeProductsService.deleteProduct(product);
+        };
+
     });
 
 })();

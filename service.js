@@ -20,9 +20,16 @@
         bikeProducts.push(product);
       }
 
+      var deleteBikeProduct = function(product){
+              var idx = bikeProducts.indexOf(product);
+              // console.log(idx);
+              bikeProducts.splice(idx, 1);
+      }
+
       return {
         getProducts: getBikeProducts,
-        addProduct: addBikeProduct
+        addProduct: addBikeProduct,
+        deleteProduct: deleteBikeProduct
         //left side is public api side and right side is private
       };
     });

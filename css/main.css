@@ -11,6 +11,10 @@ h2 {
   font-size: 48px;
   text-align: center; }
 
+h3 {
+  font-size: 32px;
+  text-align: center; }
+
 button {
   color: black; }
 
@@ -30,6 +34,7 @@ button {
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
   .homeimg h3 {
+    font-size: 24px;
     position: absolute;
     top: 85%;
     left: 70%; }
@@ -37,3 +42,23 @@ button {
 .homeimg:hover, .homeimg:focus {
   color: white;
   text-decoration: none; }
+
+.404img {
+  width: 80%;
+  height: 400px;
+  margin-top: 10%; }
+
+.prodimg {
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 5%;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
+
+p {
+  text-align: center; }
+
+.adminbtn {
+  margin-left: 2%;
+  align: center; }

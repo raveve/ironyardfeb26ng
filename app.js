@@ -11,13 +11,16 @@
         controller: 'MainController as mainCtrl'
       })
       .when('/admin', {
-        templateUrl: 'views/admin.html'
+        templateUrl: 'views/admin.html',
+        controller: 'MainController as mainCtrl'
       })
       .when('/new', {
-        templateUrl: 'views/new.html'
+        templateUrl: 'views/new.html',
+        controller: 'MainController as mainCtrl'
       })
       .when('/products', {
-        templateUrl: 'views/products.html'
+        templateUrl: 'views/products.html',
+        controller: 'MainController as mainCtrl'
       })
       .when('/notfound', {
         templateUrl: 'views/notfound.html'
