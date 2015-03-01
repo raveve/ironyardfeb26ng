@@ -6,6 +6,8 @@
 
         mainCtrl.products = BikeProductsService.getProducts();
 
+        mainCtrl.product = BikeProductsService.getProduct();
+
         mainCtrl.addProduct = function (newProduct) {
           BikeProductsService.addProduct(newProduct);
           $scope.newProduct = {};

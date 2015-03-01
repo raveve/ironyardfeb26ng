@@ -34,6 +34,12 @@
         return bikeProducts;
       }
 
+      var getBikeProduct = function (product) {
+        var idx = bikeProducts.indexOf(product);
+        var bikeProduct = bikeProducts[idx];
+        return bikeProduct;
+      }
+
       var addBikeProduct = function (product) {
         bikeProducts.push(product);
       }
@@ -50,6 +56,7 @@
 
       return {
         getProducts: getBikeProducts,
+        getProduct: getBikeProduct,
         addProduct: addBikeProduct,
         deleteProduct: deleteBikeProduct,
         editProduct: editBikeProduct
