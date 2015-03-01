@@ -20,21 +20,21 @@
       <form>
         <div class="form-group" ng-submit="mainCtrl.editProduct(product)">
           <label for="">Product Name</label>
-          <input class="form-control" type="text" ng-model="product.name" placeholder="{{product.name}}" required>
+          <input class="form-control" type="text" ng-model="selectedProduct.name" placeholder="{{selectedProduct.name}}" required>
         </div>
         <div class="form-group">
           <label for="">Product Image URL</label>
-          <input class="form-control" type="text" ng-model="product.url" placeholder="{{product.url}}" required>
+          <input class="form-control" type="text" ng-model="selectedProduct.url" placeholder="{{selectedProduct.url}}" required>
         </div>
         <div class="form-group">
           <label for="">Product Details</label>
-          <textarea class="form-control" rows="3" ng-model="product.details" placeholder="{{product.details}}" required></textarea>
+          <textarea class="form-control" rows="3" ng-model="selectedProduct.details" placeholder="{{selectedProduct.details}}" required></textarea>
         </div>
         <div class="form-group">
           <label for="">Product Price</label>
           <div class="input-group">
             <div class="input-group-addon">$</div>
-            <input type="text" class="form-control" id="exampleInputAmount" ng-model="product.price" placeholder="{{product.price}}" required>
+            <input type="text" class="form-control" id="exampleInputAmount" ng-model="selectedProduct.price" placeholder="{{selectedProduct.price}}" required>
           </div>
         </div>
         <button type="submit" class="btn btn-default pull-right">Submit Product Edit</button>
