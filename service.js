@@ -38,13 +38,14 @@
         bikeProducts.push(product);
       }
 
-      var deleteBikeProduct = function(product){
+      var deleteBikeProduct = function(product) {
         var idx = bikeProducts.indexOf(product);
         bikeProducts.splice(idx, 1);
       }
 
-      var editBikeProduct = function(product){
-        var selectedProduct = product;
+      var editBikeProduct = function(product) {
+        var idx = bikeProducts.indexOf(product);
+        // var selectedProduct = product;
       }
 
       return {

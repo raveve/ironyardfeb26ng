@@ -16,9 +16,9 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1>Peddler</h1>
-      <h2>Add a Product</h2>
+      <h2>Edit Product</h2>
       <form>
-        <div class="form-group">
+        <div class="form-group" ng-add="product in mainCtrl.product">
           <label for="">Product Name</label>
           <input class="form-control" type="text" ng-model="product.name" placeholder="{{product.name}}" required>
         </div>
