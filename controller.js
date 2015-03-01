@@ -15,6 +15,10 @@
           BikeProductsService.deleteProduct(product);
         };
 
+        mainCtrl.editProduct = function(product) {
+          BikeProductsService.editProduct(product);
+        };
+
     });
 
 })();
