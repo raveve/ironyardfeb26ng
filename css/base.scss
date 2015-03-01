@@ -2,7 +2,7 @@ $font: 'Hammersmith One', sans-serif;
 
 
 body {
-  background: url('/images/EhYKSby.png');
+  background: linear-gradient(rgba(64, 64, 64, 0.4), rgba(64, 64, 64, 0.4)), url('/images/EhYKSby.png');
   color: white;
   font-family: $font;
 }
@@ -74,6 +74,16 @@ p {
   text-align: center;
 }
 
+.price {
+  margin-bottom: 5%;
+}
+
+.prodbtm {
+  border-bottom: 1px solid white;
+  margin-bottom: 3%;
+}
+
 .adminbtn {
   margin-left: 2%;
+  margin-bottom: 5%;
 }

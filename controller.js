@@ -17,6 +17,7 @@
 
         mainCtrl.editProduct = function(product) {
           BikeProductsService.editProduct(product);
+          $scope.newProduct = {};
         };
 
     });

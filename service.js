@@ -44,8 +44,7 @@
       }
 
       var editBikeProduct = function(product){
-        var idx = bikeProducts.indexOf(product);
-        product[idx] = product;
+        var selectedProduct = product;
       }
 
       return {
