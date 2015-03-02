@@ -30,6 +30,10 @@
         }
       ];
 
+      var cartProducts =  [
+
+      ];
+
       var getBikeProducts = function () {
         return bikeProducts;
       }
@@ -54,12 +58,23 @@
         var selectedProduct = product;
       }
 
+      var buyBikeItem = function(product) {
+        cartProducts.push(product);
+        console.log(cartProducts);
+      }
+
+      var getCart = function() {
+        return cartProducts;
+      }
+
       return {
         getProducts: getBikeProducts,
         getProduct: getBikeProduct,
         addProduct: addBikeProduct,
         deleteProduct: deleteBikeProduct,
-        editProduct: editBikeProduct
+        editProduct: editBikeProduct,
+        buyItem: buyBikeItem,
+        getCartProducts: getCart
         //left side is public api side and right side is private
       };
     });

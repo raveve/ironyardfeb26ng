@@ -8,6 +8,12 @@
 
         mainCtrl.product = BikeProductsService.getProduct();
 
+        mainCtrl.cartProducts = BikeProductsService.getCartProducts();
+
+        mainCtrl.buyItem = function(product){
+          BikeProductsService.buyItem(product);
+        };
+
         mainCtrl.addProduct = function (newProduct) {
           BikeProductsService.addProduct(newProduct);
           $scope.newProduct = {};

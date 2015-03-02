@@ -20,9 +20,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4 col-md-offset-3 prodbtm" ng-repeat="product in mainCtrl.products">
+    <div class="col-md-4 col-md-offset-3 prodbtm" ng-repeat="product in mainCtrl.cartProducts">
       <h4>{{product.name}}</h4>
-      <h4 class="pull-right">${{product.price}}</h4>
+      <h4 class="pull-right">{{product.price | currency}}</h4>
       <select class="form-control pull-right quantity">
         <option>1</option>
         <option>2</option>
@@ -36,7 +36,7 @@
         <option>10</option>
       </select>
       <img class="cartimg" src="{{product.url}}" alt="">
-      <button class="btn btn-default cntbtn pull-right">
+      <button ng-click="cart.deleteCartProd()" class="btn btn-default cntbtn pull-right">
         <i class="fa fa-trash fa-2x fa-fw"></i>
       </button>
     </div>
