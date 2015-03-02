@@ -43,10 +43,13 @@ button {
   color: white;
   text-decoration: none; }
 
-.404img {
+.not-found {
   width: 80%;
-  height: 400px;
-  margin-top: 10%; }
+  height: 350px;
+  margin-top: 5%;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .prodimg {
   width: 60%;
@@ -59,20 +62,29 @@ button {
 p {
   text-align: center; }
 
-.price {
-  margin-bottom: 5%; }
-
 .prodbtm {
   border-bottom: 1px solid white;
   margin-bottom: 3%; }
 
 .adminbtn {
-  margin-left: 2%;
-  margin-bottom: 5%; }
+  margin-left: 2%; }
 
 .leftbtn {
   margin-left: 40%; }
 
-.trashbtn {
+.cntbtn {
   margin-left: 45%;
-  margin-top: 5%; }
+  margin-top: 5%;
+  margin-bottom: 5%; }
+
+.cartimg {
+  width: 50%;
+  height: 150px;
+  object-fit: cover;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
+
+.quantity {
+  width: 15%;
+  margin-right: 2%; }

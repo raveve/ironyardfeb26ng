@@ -22,6 +22,10 @@
         templateUrl: 'views/products.html',
         controller: 'MainController as mainCtrl'
       })
+      .when('/cart', {
+        templateUrl: 'views/cart.html',
+        controller: 'MainController as mainCtrl'
+      })
       .when('/edit', {
         templateUrl: 'views/edit.html',
         controller: 'MainController as mainCtrl'

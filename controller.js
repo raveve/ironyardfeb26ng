@@ -17,8 +17,8 @@
           BikeProductsService.deleteProduct(product);
         };
 
-        mainCtrl.editProduct = function(product) {
-          BikeProductsService.editProduct(product);
+        mainCtrl.editProduct = function(product, idx) {
+          BikeProductsService.editProduct(product, idx);
           $scope.newProduct = {};
         };
 
