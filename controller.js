@@ -28,6 +28,10 @@
           $scope.newProduct = {};
         };
 
+        mainCtrl.deleteCProduct = function (product) {
+          BikeProductsService.deleteCProduct(product);
+        };
+
     });
 
 })();

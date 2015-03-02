@@ -67,6 +67,11 @@
         return cartProducts;
       }
 
+      var deleteCartProduct = function(product) {
+        var idx = cartProducts.indexOf(product);
+        cartProducts.splice(idx, 1);
+      }
+
       return {
         getProducts: getBikeProducts,
         getProduct: getBikeProduct,
@@ -74,7 +79,8 @@
         deleteProduct: deleteBikeProduct,
         editProduct: editBikeProduct,
         buyItem: buyBikeItem,
-        getCartProducts: getCart
+        getCartProducts: getCart,
+        deleteCProduct: deleteCartProduct
         //left side is public api side and right side is private
       };
     });
