@@ -73,7 +73,7 @@
       var deleteCartProduct = function(product) {
         var idx = cartProducts.indexOf(product);
         cartProducts.splice(idx, 1);
-        cartTotalPrice();
+        totalPrice=cartTotalPrice();
         console.log(totalPrice);
       }
 
@@ -88,6 +88,7 @@
             totalPrice += +cartProducts[i].price;
           }
         }
+        return totalPrice;
       }
 
 

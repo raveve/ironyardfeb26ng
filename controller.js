@@ -35,11 +35,13 @@
 
         mainCtrl.deleteCProduct = function (product) {
           BikeProductsService.deleteCProduct(product);
+          mainCtrl.totalPrice = BikeProductsService.getCartPrice();
         };
 
-        mainCtrl.login = function (username) {
-          if(username === "raven") {
+        mainCtrl.login = function (userName) {
+          if(userName === "raven") {
             $location.path('/admin');
+            console.log(mainCtrl.userName);
           }
         };
 
