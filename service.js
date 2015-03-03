@@ -34,6 +34,8 @@
 
       ];
 
+      var totalPrice = 0;
+
       var getBikeProducts = function () {
         return bikeProducts;
       }
@@ -60,6 +62,7 @@
 
       var buyBikeItem = function(product) {
         cartProducts.push(product);
+        cartTotalPrice();
         console.log(cartProducts);
       }
 
@@ -70,7 +73,25 @@
       var deleteCartProduct = function(product) {
         var idx = cartProducts.indexOf(product);
         cartProducts.splice(idx, 1);
+        cartTotalPrice();
+        console.log(totalPrice);
       }
+
+      var getCartPrice = function(){
+        return totalPrice;
+      }
+
+      var cartTotalPrice = function() {
+        totalPrice = 0;
+        if (cartProducts.length > 0) {
+          for (var i = 0; i < cartProducts.length; i++) {
+            totalPrice += +cartProducts[i].price;
+          }
+        }
+      }
+
+
+  // * product[i].quantity
 
       return {
         getProducts: getBikeProducts,
@@ -80,7 +101,9 @@
         editProduct: editBikeProduct,
         buyItem: buyBikeItem,
         getCartProducts: getCart,
-        deleteCProduct: deleteCartProduct
+        deleteCProduct: deleteCartProduct,
+        cartTotal: cartTotalPrice,
+        getCartPrice: getCartPrice
         //left side is public api side and right side is private
       };
     });

@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   angular.module('peddlerApp')
-    .controller('MainController', function (BikeProductsService, $scope) {
+    .controller('MainController', function (BikeProductsService, $scope, $location) {
         var mainCtrl = this; // the scope of our controller is 'this'
 
         mainCtrl.products = BikeProductsService.getProducts();
@@ -10,7 +10,11 @@
 
         mainCtrl.cartProducts = BikeProductsService.getCartProducts();
 
-        mainCtrl.buyItem = function(product){
+        mainCtrl.totalPrice = BikeProductsService.getCartPrice();
+
+        mainCtrl.cartTotal = BikeProductsService.cartTotal();
+
+        mainCtrl.buyItem = function (product) {
           BikeProductsService.buyItem(product);
         };
 
@@ -19,11 +23,12 @@
           $scope.newProduct = {};
         };
 
-        mainCtrl.deleteProduct = function(product) {
+        mainCtrl.deleteProduct = function (product) {
           BikeProductsService.deleteProduct(product);
+          $location.path("/cart");
         };
 
-        mainCtrl.editProduct = function(product, idx) {
+        mainCtrl.editProduct = function (product, idx) {
           BikeProductsService.editProduct(product, idx);
           $scope.newProduct = {};
         };
