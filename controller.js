@@ -37,6 +37,12 @@
           BikeProductsService.deleteCProduct(product);
         };
 
+        mainCtrl.login = function (username) {
+          if(username === "raven") {
+            $location.path('/admin');
+          }
+        };
+
     });
 
 })();
