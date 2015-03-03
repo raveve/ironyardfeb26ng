@@ -22,7 +22,9 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3 prodbtm" ng-repeat="product in mainCtrl.products">
       <h3>{{product.name}}</h3>
-      <img class="prodimg" src="{{product.url}}" alt="">
+      <a href="#/fullview/{{$index}}">
+        <img class="prodimg" src="{{product.url}}" alt="">
+      </a>
       <p>{{product.details}}</p>
       <h3>{{product.price  | currency}}</h3>
       <a href="#/cart">
