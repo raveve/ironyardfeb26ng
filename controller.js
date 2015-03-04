@@ -8,16 +8,6 @@
 
         mainCtrl.reviews = BikeProductsService.getReviews();
 
-        // $scope.$on('product:deleted', function() {}
-
-        // .success(function(data) {
-        //   main.products = data;
-        // })
-
-        //ProductService.getSingleProduct($routeParams.productID).success(function(data) {
-          //   admin.singleProduct = data;
-          // });
-
         mainCtrl.product = BikeProductsService.getProduct($routeParams.productIndex);
         console.log(mainCtrl.product);
           mainCtrl.go = function (index) {
@@ -44,7 +34,7 @@
           $scope.newReview = {};
         }
 
-        mainCtrl.deleteProduct = function (product) {  //make product id on both lines
+        mainCtrl.deleteProduct = function (product) {
           BikeProductsService.deleteProduct(product);
           $location.path("/cart");
         };

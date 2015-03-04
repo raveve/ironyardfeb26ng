@@ -78,15 +78,12 @@ p {
   margin-bottom: 3%; }
 
 .adminbtn {
-  margin-left: 2%; }
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 5%; }
 
 .leftbtn {
   margin-left: 40%; }
-
-.cntbtn {
-  margin-left: 45%;
-  margin-top: 5%;
-  margin-bottom: 5%; }
 
 .cartimg {
   width: 50%;

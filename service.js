@@ -4,8 +4,6 @@
   angular.module('peddlerApp')
     .factory('BikeProductsService', function ($http, $rootScope) {
 
-      // var url = "http://tiy-fee-rest.herokuap.com/collections/peddler";
-
       var bikeProducts =  [
         {
           name: "Rainbow Allen Key Set",
@@ -47,27 +45,14 @@
         return bikeProducts;
       }
 
-      // var getBikeProducts = function () {
-      //   return $http.get(url);
-      // }
-
       var getBikeProduct = function (index) {
         var bikeProduct = bikeProducts[index];
         return bikeProduct;
       }
 
-      // var getBikeProduct = function (id) {
-      //   return $http.get(url + '/' + id);
-      // }
-
       var addBikeProduct = function (product) {
         bikeProducts.push(product);
       }
-
-      // var addBikeProduct = function (product) {
-      //   $http.post(url, product);
-      //   $rootScope.$broadcast('product:created');
-      // }
 
       var addNewReview = function (review, product) {
         product.reviews.push(review);
@@ -83,19 +68,9 @@
         bikeProducts.splice(idx, 1);
       }
 
-      // var deleteBikeProduct = function(id) {
-      //   $http.delete(url + '/' + id);
-      //   $rootScope.$broadcast('product:deleted');
-      // }
-
       var editBikeProduct = function(product, index) {
         bikeProducts[index] = product;
       }
-
-      // var editBikeProduct = function(product, id) {
-      //   $http.put(url + '/' + id, product);
-      //   $rootScope.$broadcast('product:updated');
-      // }
 
       var buyBikeItem = function(product) {
         cartProducts.push(product);
