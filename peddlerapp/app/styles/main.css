@@ -85,6 +85,10 @@ p {
 .leftbtn {
   margin-left: 40%; }
 
+.cntbtn {
+  margin-left: 45%;
+  margin-bottom: 5%; }
+
 .cartimg {
   width: 50%;
   height: 150px;

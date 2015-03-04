@@ -3,23 +3,35 @@
   angular.module('peddlerApp')
     .controller('AdminController', function (AdminService, $scope, $location, $routeParams) {
         var adminCtrl = this;
+        
+        adminCtrl.product = [];
 
-        adminCtrl.products = AdminService.getProducts();
+        AdminService.getProducts().success(function (products) {
+          adminCtrl.products = products;
+        });
 
-        adminCtrl.product = AdminService.getProduct($routeParams.productIndex);
+        AdminService.getProduct($routeParams.productid).then(function (response) {
+         adminCtrl.product = response.data;
+         console.log($routeParams.productid);
+       });
 
         adminCtrl.addProduct = function (newProduct) {
-          AdminService.addProduct(newProduct);
+          AdminService.addProduct({
+            name:newProduct.name,
+            url:newProduct.url,
+            details:newProduct.details,
+            price:newProduct.price,
+            reviews: []
+          });
           $scope.newProduct = {};
-          $location.path('/admin');
         };
 
-        adminCtrl.deleteProduct = function (product) {
-          AdminService.deleteProduct(product);
+        adminCtrl.deleteProduct = function (id) {
+          AdminService.deleteProduct(id);
         };
 
         adminCtrl.editProduct = function (product) {
-         AdminService.editProduct(product, $routeParams.productIndex);
+         AdminService.editProduct(product);
          $location.path('/admin');
        };
 

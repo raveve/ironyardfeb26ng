@@ -22,13 +22,13 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3 prodbtm" ng-repeat="product in prodCtrl.products">
       <h3>{{product.name}}</h3>
-      <a href="#/fullview/{{$index}}">
+      <a href="#/fullview/{{product._id}}">
         <img class="prodimg" src="{{product.url}}" alt="">
       </a>
       <p>{{product.details}}</p>
       <h3>{{product.price  | currency}}</h3>
       <a href="#/cart">
-        <button  ng-click="prodCtrl.buyItem(product)" class="btn btn-default cntbtn">
+        <button ng-click="prodCtrl.buyItem(product)" class="btn btn-default cntbtn">
           <i class="fa fa-shopping-cart fa-2x fa-fw"></i>
         </button>
       </a>

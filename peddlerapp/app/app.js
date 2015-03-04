@@ -18,7 +18,7 @@
         templateUrl: 'admin/views/new.html',
         controller: 'AdminController as adminCtrl'
       })
-      .when('/edit/:productIndex', {
+      .when('/edit/:productid', {
         templateUrl: 'admin/views/edit.html',
         controller: 'AdminController as adminCtrl'
       })
@@ -26,7 +26,7 @@
         templateUrl: 'products/views/products.html',
         controller: 'ProductsController as prodCtrl'
       })
-      .when('/fullview/:productIndex', {
+      .when('/fullview/:productid', {
         templateUrl: 'products/views/fullview.html',
         controller: 'ProductsController as prodCtrl'
       })
