@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-10">
+      <a href="#/products">
+        <button class="btn btn-default pull-right topbtn">
+          <i class="fa fa-times fa-2x fa-fw"></i>
+        </button>
+      </a>
+      <a href="#/">
+        <button class="btn btn-default pull-right topbtn">
+          <i class="fa fa-home fa-2x fa-fw"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Peddler</h1>
+      <h2>Shopping Cart</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h4 class="pull-right">Total = {{cartCtrl.totalPrice | currency}}</h4>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-3 prodbtm" ng-repeat="product in cartCtrl.cartProducts">
+      <h4>{{cartCtrl.product.name}}</h4>
+      <h4 class="pull-right">{{cartCtrl.product.price | currency}}</h4>
+      <select class="form-control pull-right quantity">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+      </select>
+    <img class="cartimg" src="{{cartCtrl.product.url}}" alt="">
+    <button ng-click="cartCtrl.deleteCProduct(product)" class="btn btn-default cntbtn pull-right">
+      <i class="fa fa-trash fa-2x fa-fw"></i>
+    </button>
+  </div>
+</div>

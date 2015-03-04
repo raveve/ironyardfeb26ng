@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-10">
+        <button class="btn btn-default pull-right topbtn" ng-click="showUserNameForm = !showUserNameForm">
+          <i class="fa fa-wrench fa-2x fa-fw"></i>
+        </button>
+      <div class="form-group" ng-show="showUserNameForm">
+        <input type="text" ng-model="mainCtrl.userName" class="form-control pull-right topbtn" placeholder="Username">
+        <button ng-click="mainCtrl.login(mainCtrl.userName)" class="btn btn-default pull-right topbtn">
+          <i class="fa fa-user-secret fa-2x fa-fw"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Peddler</h1>
+      <h2>Bike Accessories</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <a class="center-block homeimg" href="#/products"><h3>Pedal on in...</h3></a>
+    </div>
+  </div>
+</div>

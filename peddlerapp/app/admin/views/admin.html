@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-10">
+      <a href="#/new">
+        <button class="btn btn-default pull-right topbtn">
+          <i class="fa fa-plus-square fa-2x fa-fw"></i>
+        </button>
+      </a>
+      <a href="#/">
+        <button class="btn btn-default pull-right topbtn">
+          <i class="fa fa-home fa-2x fa-fw"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Peddler</h1>
+      <h2>Administrator</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 prodbtm" ng-repeat="product in adminCtrl.products">
+      <h3>{{product.name}}</h3>
+        <img class="prodimg" src="{{product.url}}" alt="">
+      <p>{{product.details}}</p>
+      <h3>{{product.price  | currency}}</h3>
+      <a href="#/edit/{{$index}}">
+        <button class="btn btn-default adminbtn">
+          <i class="fa fa-pencil-square-o fa-2x fa-fw"></i>
+        </button>
+      </a>
+      <button class="btn btn-default adminbtn" ng-click="adminCtrl.deleteProduct(product)">
+        <i class="fa fa-trash fa-2x fa-fw"></i>
+      </button>
+    </div>
+  </div>
+</div>

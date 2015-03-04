@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-10">
+      <a href="#/products">
+        <button class="btn btn-default pull-right topbtn">
+          <i class="fa fa-times fa-2x fa-fw"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Peddler</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 prodbtm">
+      <h3>{{prodCtrl.product.name}}</h3>
+      <img class="prodimg" src="{{prodCtrl.product.url}}" alt="">
+      <p>{{prodCtrl.product.details}}</p>
+      <h3>{{prodCtrl.product.price  | currency}}</h3>
+      <a href="#/cart">
+        <button  ng-click="prodCtrl.buyItem(prodCtrl.product)" class="btn btn-default cntbtn">
+          <i class="fa fa-shopping-cart fa-2x fa-fw"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2>Product Reviews</h2>
+      <button class="btn btn-default cntbtn" ng-click="showReviewForm = !showReviewForm">
+        <i class="fa fa-comment fa-2x fa-fw"></i>
+      </button>
+      <form ng-show="showReviewForm" ng-submit="prodCtrl.addReview(newReview, prodCtrl.product)">
+        <div class="form-group">
+          <label for="">Name</label>
+          <input class="form-control" type="text" ng-model="newReview.name" required>
+        </div>
+        <div class="form-group">
+          <label for="">Review Title</label>
+          <input class="form-control" type="text" ng-model="newReview.title" required>
+        </div>
+        <div class="form-group">
+          <label for="">Review</label>
+          <textarea class="form-control" rows="3" ng-model="newReview.review" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-default pull-right" ng-click="showReviewForm = !showReviewForm">Submit Product Review</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 review" ng-repeat="review in prodCtrl.product.reviews">
+      <h4>{{review.title}}</h4>
+      <h5>{{review.name}}</h5>
+      <p>{{review.review}}</p>
+    </div>
+  </div>
+</div>
