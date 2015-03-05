@@ -4,7 +4,7 @@
   angular.module('peddlerApp')
     .factory('CartService', function ($http, $rootScope) {
 
-      var url = "http://tiy-fee-rest.herokuapp.com/collections/peddler3";
+      var url = "http://tiy-fee-rest.herokuapp.com/collections/peddlerapp";
 
       var cartProducts =  [
 
@@ -12,15 +12,6 @@
 
 
       var totalPrice = 0;
-
-      // var getBikeProducts = function () {
-      //   return bikeProducts;
-      // }
-      //
-      // var getBikeProduct = function (index) {
-      //   var bikeProduct = bikeProducts[index];
-      //   return bikeProduct;
-      // }
 
       var getBikeProducts = function () {
         return $http.get(url);

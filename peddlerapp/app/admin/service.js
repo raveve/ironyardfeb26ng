@@ -4,7 +4,7 @@
   angular.module('peddlerApp')
     .factory('AdminService', function ($http, $rootScope) {
 
-      var url = "http://tiy-fee-rest.herokuapp.com/collections/peddler3";
+      var url = "http://tiy-fee-rest.herokuapp.com/collections/peddlerapp";
 
       var getBikeProducts = function () {
         return $http.get(url);
